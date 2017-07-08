@@ -13,5 +13,3 @@
 
 # Membros do Projeto
 - Hiro,SkelletonX,lovemomory & ThankYou **syntax-dev-br**
-
-[Torre da Extinção](http://i.imgur.com/ymb5wkf.jpg)
