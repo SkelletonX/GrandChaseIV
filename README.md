@@ -9,6 +9,6 @@
 - Para compilar o projeto, você deve usar o Visual Studio 2015 com o .NET Framework 4.5.2.
 
 # Membros do Projeto
-- *Hiro,SkelletonX,lovemomory & ThankYou **syntax-dev-br**
+- Hiro,SkelletonX,lovemomory & ThankYou **syntax-dev-br**
 
 [Torre da Extinção](http://i.imgur.com/ymb5wkf.jpg)
