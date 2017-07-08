@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{46D30067-137B-44A3-BEAE-57EA3BDA4A43}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrandChase</RootNamespace>
+    <AssemblyName>Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\..\Lib\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="Manager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Src_GameServer\Release\Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\Messenger\packages\MySql.Data.6.9.9\lib\net40\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\NumericalKeyedCollection.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Data\Database.cs" />
+    <Compile Include="Data\Datum.cs" />
+    <Compile Include="Data\Meta.cs" />
+    <Compile Include="Data\RowNotUniqueException.cs" />
+    <Compile Include="HexEncoding.cs" />
+    <Compile Include="IO\Packet\InPacket.cs" />
+    <Compile Include="IO\Packet\OutPacket.cs" />
+    <Compile Include="IO\Packet\PacketBase.cs" />
+    <Compile Include="IO\Packet\PacketReadException.cs" />
+    <Compile Include="IO\SettingReadException.cs" />
+    <Compile Include="IO\Settings.cs" />
+    <Compile Include="ISerializable.cs" />
+    <Compile Include="Net\PacketHandlerAttribute.cs" />
+    <Compile Include="Net\PacketSendException.cs" />
+    <Compile Include="Net\RTTIValues.cs" />
+    <Compile Include="Net\Session.cs" />
+    <Compile Include="Opcodes.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\BytesStringifier.cs" />
+    <Compile Include="Security\Compression.cs" />
+    <Compile Include="Security\CryptoConstants.cs" />
+    <Compile Include="Security\CryptoFunctions.cs" />
+    <Compile Include="Security\CryptoGenerators.cs" />
+    <Compile Include="Security\HashCryptograph.cs" />
+    <Compile Include="TSingleton.cs" />
+    <Compile Include="Utilities\BytesUtil.cs" />
+    <Compile Include="Utilities\HandlerStore.cs" />
+    <Compile Include="Utilities\IdLooper.cs" />
+    <Compile Include="Utilities\RTTIUtilities.cs" />
+    <Compile Include="Utilities\TimeUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
