@@ -9,7 +9,7 @@
 - Para compilar o projeto, você deve usar o Visual Studio 2015 com o .NET Framework 4.5.2.
 
 # Info + 
-- Acesso nosso [wiki aqui](https://github.com/SkelletonX/GrandChaseIV/wiki)
+- Acesse a nossa [wiki aqui](https://github.com/SkelletonX/GrandChaseIV/wiki)
 
 # Membros do Projeto
 - Hiro,SkelletonX,lovemomory & ThankYou **syntax-dev-br**
