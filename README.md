@@ -1,4 +1,4 @@
-# Files GrandChase - Season 5
+# Files GrandChase - Season 4
 
 - Este e um projeto do ZTeam Studio, é um emulador feito por **lovemomory** continuado por **SkelletonX** & **Hiro** 
 
