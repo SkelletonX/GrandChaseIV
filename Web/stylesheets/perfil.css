@@ -1,0 +1,93 @@
+li,dt,dd {list-style:none;}
+h2 {display:none;}
+
+/** etc 
+******************************************************/
+.areashow1 {display:block;margin-left: 23px;}
+.config {margin:0;padding:0;border:0;}
+/** contents
+******************************************************/
+
+ul.tabType1 {position:relative;width:570px;border-bottom:2px solid #4f4f4f;margin:0 auto 15px auto;/**/}
+ul.tabType1.mgn1 {margin:0 auto 20px auto;}
+ul.tabType1 li {position:relative;display:table-cell;*display:inline;*zoom:1;}
+
+.sbj {position:relative;background:url(http://file.kaybo1.com/pointblank/common/deco_arw4.gif) 3px center no-repeat;padding:0px 0px 0px 18px;color:#59c2e4;font:bold 11px verdana;}
+.box1 {position:relative;width:546px;border:2px solid #000;padding:10px 10px 10px 10px;margin:7px 0 10px 0px;}
+dl.dlA {position:relative;width:auto;height:auto;vertical-align:top;}
+dl.dlA dt,dl.dlA dd {position:relative;display:table-cell;*display:inline;*zoom:1;vertical-align:top;}
+dl.dlA dt {width:90px;height:auto;vertical-align:top;}
+dl.dlA dt img {width:70px;height:70px;border:2px solid #8a8a8a;display:block;font-size:0;line-height:0;}
+dl.dlA dd {width:456px;height:auto;}
+
+dl.dlB {position:relative;width:auto;height:auto;vertical-align:top;}
+dl.dlB dt,dl.dlB dd {position:relative;display:table-cell;*display:inline;*zoom:1;vertical-align:top;}
+dl.dlB dt {width:210px;height:auto;vertical-align:top;}
+dl.dlB dt img {width:189px;height:148px;border:3px solid #8a8a8a;display:block;font-size:0;line-height:0;}
+dl.dlB dd {width:336px;height:auto;}
+
+ul.ulA1 {position:relative;width:100%;}
+ul.ulA1 li {position:relative;display:list-item;width:auto;border-top:1px solid #404040;padding:6px 5px 6px 5px;font:normal 11px verdana;color:#fff;line-height:100%;}
+ul.ulA1 li.bdr1 {position:relative;width:auto;border-top:2px solid #6e6e6e;font:bold 11px verdana;color:#ffc000;}
+ul.ulA1 li strong {position:relative;margin:0 10px 0 0;display:inline-block;width:20px;height:20px;vertical-align:middle;overflow:hidden;background-image:url(http://file.kaybo1.com/pointblank/common/ico_grade_clan.gif);background-repeat:no-repeat;}
+ul.ulA1 li span.txtBlock1 {position:relative;display:inline-block;width:auto;height:auto;padding:0 30px 0 10px;vertical-align:middle;background:url(http://file.kaybo1.com/pointblank/common/deco_arw5.gif) 2px center no-repeat;}
+span.rankup {position:relative;display:inline-block;margin:0px 1px 0px 1px;width:11px;height:11px;vertical-align:middle;overflow:hidden;background:url(http://file.kaybo1.com/pointblank/common/status_arw.gif) 0px 0px no-repeat;}
+span.rankdown {position:relative;display:inline-block;margin:0px 1px 0px 1px;width:11px;height:11px;vertical-align:middle;overflow:hidden;background:url(http://file.kaybo1.com/pointblank/common/status_arw.gif) 0px -22px no-repeat;}
+span.ranknormal {position:relative;display:inline-block;margin:0px 1px 0px 1px;width:11px;height:11px;vertical-align:middle;overflow:hidden;background:url(http://file.kaybo1.com/pointblank/common/status_arw.gif) 0px -11px no-repeat;}
+
+ul.ulA {position:relative;width:100%;}
+ul.ulA li {position:relative;display:list-item;width:auto;border-top:1px solid #404040;padding:6px 5px 6px 5px;font:normal 11px verdana;color:#fff;line-height:100%;}
+ul.ulA li.bdr1 {position:relative;width:auto;border-top:2px solid #6e6e6e;}
+ul.ulA li strong {position:relative;margin:0 10px 0 0;display:inline-block;width:20px;height:20px;vertical-align:middle;overflow:hidden;background-image:url(http://file.kaybo1.com/pointblank/common/ico_grade.gif);background-repeat:no-repeat;}
+ul.ulA li span.txtBlock1 {position:relative;display:inline-block;width:auto;height:auto;padding:0 30px 0 10px;vertical-align:middle;background:url(http://file.kaybo1.com/pointblank/common/deco_arw5.gif) 2px center no-repeat;}
+
+ul.ulB {position:relative;width:100%;}
+ul.ulB li {position:relative;display:list-item;width:auto;border-top:1px solid #404040;padding:8px 5px 8px 5px;font:normal 11px verdana;color:#fff;line-height:100%;}
+ul.ulB li.bdr1 {position:relative;width:auto;border-top:2px solid #6e6e6e;}
+.txtRed1 {font:bold 11px verdana;color:#ba5050;}
+
+ul.ulC {position:relative;width:100%;}
+ul.ulC li {position:relative;display:table-cell;*display:inline;*zoom:1;vertical-align:middle;width:208px;padding:0px 0px 0px 0px;border:none;}
+ul.ulC li.cell1 {position:relative;display:table-cell;*display:inline;*zoom:1;vertical-align:middle;width:328px;padding:0px 0px 0px 0px;border:none;}
+ul.ulC li span.cell1 {display:inline-block;vertical-align:middle;width:41%;font:bold 11px verdana;color:#dadcc5;}
+ul.ulC li span.cell2 {display:inline-block;vertical-align:middle;width:57%;font:normal 11px verdana;color:#dadcc5;letter-spacing:0;overflow:hidden;color:#fff;}
+
+
+ul.ulD {position:relative;width:100%;height:50px;background:url(http://file.kaybo1.com/pointblank/common/mypb_medal_bg.gif) 0px 0px no-repeat;}
+ul.ulD li {position:relative;display:table-cell;*display:inline;*zoom:1;vertical-align:top;width:273px;border:none;height:50px;line-height:100%;font:11px verdana;color:#dadcc5;}
+ul.ulD li.sect1 {position:relative;width:213px;height:50px;padding:0px 0 0 60px;background:url(http://file.kaybo1.com/pointblank/common/badge.gif) 15px center no-repeat;}
+ul.ulD li.sect2 {position:relative;width:213px;height:50px;padding:0px 0 0 60px;background:url(http://file.kaybo1.com/pointblank/common/medal.gif) 15px center no-repeat;}
+ul.ulD li span {position:relative;display:inline-block;margin:17px 0 0 0;vertical-align:middle;}
+ul.ulD li strong {position:relative;display:inline-block;font:bold 16px verdana;vertical-align:middle;padding:0px 15px;}
+
+.btnAreaC {width:100%;height:auto;text-align:center;margin:30px 0 0 0;}
+
+/** tab button
+******************************************************/
+/* gray */
+.pbTabBtn1 {font:bold 10px verdana;color:#8c8c8c;text-decoration:none;cursor:pointer;line-height:28px;background:url(http://file.kaybo1.com/pointblank/common/btnTabGray1.gif) right 0px no-repeat;
+display:block;/*opera*/display:inline-block;/*ie*/display:-moz-inline-box;/*ff*/padding:0px 5px 0px 0px;vertical-align:middle;white-space:nowrap; margin:0px 0px;/*safari*/vertical-align:top;
+}
+.pbTabBtn1 span {font:bold 10px verdana;-moz-user-select:none;*selector-dummy:expression(this.hideFocus=true);text-transform:uppercase;
+background:url(http://file.kaybo1.com/pointblank/common/btnTabGray1.gif) no-repeat left top;height:28px;display:inline-block;padding:0px 10px 0px 15px;line-height:28px;
+}
+a.pbTabBtn1:hover {background-position:right -56px;color:#fff;margin:0px 0px;/*safari*/}
+a.pbTabBtn1:hover span {background-position:left -56px;cursor:pointer;}
+/* (selected) */
+.pbTabBtn1Sel {color:#fff;background:url(http://file.kaybo1.com/pointblank/common/btnTabGray1.gif) no-repeat right -56px;}
+.pbTabBtn1Sel span {background:url(http://file.kaybo1.com/pointblank/common/btnTabGray1.gif) no-repeat left -56px;}
+.pbTabBtn1Sel:hover span {background:url(http://file.kaybo1.com/pointblank/common/btnTabGray1.gif) no-repeat left -56px;color:#f6ff00;}
+
+.pbTabPadd1 {padding:0px 3px 0px 0px;}
+.pbTabPadd1 sapn {padding:0px 7px 0px 10px;}
+
+/** a link button **/
+/* special red black */
+.pbAlinkSp2 {font:bold 10px verdana;color:#fff;text-decoration:none;cursor:pointer;line-height:25px;background:url(http://file.kaybo1.com/pointblank/common/btnSpGray1.gif) right 0px no-repeat;
+display:block;/*opera*/display:inline-block;/*ie*/display:-moz-inline-box;/*ff*/padding:0px 1px 0px 0px;vertical-align:middle;white-space:nowrap; margin:0px 0px;/*safari*/vertical-align:top;
+}
+.pbAlinkSp2 span {font:bold 10px verdana;color:#fff;-moz-user-select:none;*selector-dummy:expression(this.hideFocus=true);text-transform:uppercase;text-decoration:none;
+background:url(http://file.kaybo1.com/pointblank/common/btnSpGray1.gif) no-repeat left top;height:25px;display:inline-block;padding:0px 19px 0px 20px;line-height:25px;
+}
+a.pbAlinkSp2:hover {background-position:right -50px;margin:0px 0px;/*safari*/}
+a.pbAlinkSp2:hover span {background-position:left -50px;color:#000;cursor:pointer;}
