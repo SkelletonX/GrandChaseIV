@@ -215,11 +215,11 @@ namespace GrandChase.Function
                     }
                     //cs.MyCharacter.MyChar[MyCharPos].Equip[j].ItemID = ItemID;  
                     DataSet ds2 = new DataSet();
-                    Database.Query(ref ds2, "SELECT   `itemID` FROM  `gc`.`equipment` WHERE `LoginUID` = '{0}' AND `CharType` = '{1}' AND `ItemUID` = '{2}'", cs.LoginUID, MyChar[MyCharPos].CharType, type);
+                    Database.Query(ref ds2, "SELECT itemID FROM gc.equipment WHERE LoginUID = '{0}' AND CharType = '{1}' AND ItemUID = '{2}'", cs.LoginUID, MyChar[MyCharPos].CharType, ItemUID);
                     if (ds2.Tables[0].Rows.Count == 0)
                     {
                         DataSet ds = new DataSet();
-                        Database.Query(ref ds, "INSERT INTO `gc`.`equipment` (  `LoginUID`,  `CharType`,  `ItemType`,  `ItemID`,`ItemUID`) VALUES  (    '{0}',    '{1}',    '{2}',    '{3}'  ,'{4}')", cs.LoginUID, MyChar[MyCharPos].CharType, type, ItemID, ItemID);
+                        Database.Query(ref ds, "INSERT INTO gc.equipment ( LoginUID, CharType, ItemType, ItemID,ItemUID) VALUES ( '{0}', '{1}', '{2}', '{3}' ,'{4}')", cs.LoginUID, MyChar[MyCharPos].CharType, type, ItemID, ItemUID);
                     }
                     else
                     {
