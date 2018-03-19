@@ -25,6 +25,7 @@ bld/
 src/Release
 m.lnk
 *.lnk
+*.suo
 
 # Visual Studio 2015 cache/options directory
 .vs/
