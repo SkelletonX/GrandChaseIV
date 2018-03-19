@@ -1,6 +1,6 @@
 # Files GrandChase - Season 4
 
-- Este e um projeto do ZTeam Studio, é um emulador feito por **lovemomory** continuado por **SkelletonX** & **Hiro** 
+- Este e um projeto do ZTeam Studio, é um emulador feito pela equipe.
 
 # Observaçoes:
 - Está em fase de desenvolvimento, ou seja, nao esta 100% pronto
@@ -12,4 +12,8 @@
 - Acesse a nossa [wiki aqui](https://github.com/SkelletonX/GrandChaseIV/wiki)
 
 # Membros do Projeto
-- Hiro,SkelletonX,lovemomory & ThankYou **syntax-dev-br**
+- Hiro,SkelletonX & ThankYou **syntax-dev-br**
+
+<p align="center">
+  <img src="http://i.imgur.com/tSELp6l.png"/>
+  </p>
