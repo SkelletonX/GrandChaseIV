@@ -99,10 +99,12 @@ namespace GameServer.network
                             this.buffer = bufferDecompress;
 
                             Packets packets = new Packets(opcode, readers, this, bufferDecompress,pInfo);
+                            log.Hex("Recebido, OpCode {" + opcode + "} Payload: ", buffer, 0);
                         }
                         else
                         {
                             Packets packets = new Packets(opcode, readers, this, this.buffer,pInfo);
+                            log.Hex("Recebido, OpCode {" + opcode + "} Payload: ", buffer, 0);
                         }
                         
                     }

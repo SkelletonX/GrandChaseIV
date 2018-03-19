@@ -93,10 +93,13 @@ namespace CenterServer.network
                             this.readers.req = bufferDecompress;
                             this.buffer = bufferDecompress;
                             Packets packets = new Packets(opcode, readers, this, bufferDecompress);
+                            log.Hex("Recebido, OpCode {" + opcode + "} Payload: ", buffer, 0);
+                            
                         }
                         else
                         {
                             Packets packets = new Packets(opcode, readers, this, this.buffer);
+                            log.Hex("Recebido, OpCode {" + opcode + "} Payload: ", buffer, 0);
                         }
                         
                     }
@@ -119,6 +122,7 @@ namespace CenterServer.network
                     this.socket.BeginReceive(this.buffer, 0, this.buffer.Length, SocketFlags.None, this.Read, null);                    
                 }
             }
+
         }
         public void close()
         {
@@ -162,7 +166,6 @@ namespace CenterServer.network
             Array.Resize(ref data, data.Length - 5);
             OutPacket GetPacket = new OutPacket(data, Crypto, Auth, prefix, count);
             this.socket.Send(GetPacket.PacketData, 0, GetPacket.PacketData.Length, 0);
-            //log.Hex("Enviando, PacketID {" + Convert.ToInt32(BitConverter.ToString(opcode).Replace("-", "")) + "} Size {"+BitConverter.ToString(size)+"} Payload : ",data);
         }
 
         public void Clear(PacketManager PM)

@@ -67,7 +67,7 @@ namespace CenterServer.network
 
                 default:
                     {
-                        log.Hex("Recebido, OpCode {" + opcode + "} Payload: ", buffer);
+                        log.Hex("Recebido, OpCode {" + opcode + "} Payload: ", buffer, 1);
                         break;
                     }
             }
