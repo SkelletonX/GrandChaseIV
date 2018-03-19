@@ -10,12 +10,13 @@
 	
 	$user = new Usuario($_SESSION['username']);
 	$ranking = new Rank;
+    $config = new Config; 
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="author" content="SkelletonX" />
-		<title>GrandChase Hero</title>
+		<title><?php echo $config->NameGC ?></title>
 		<link rel="shortcut icon" type="image/png" href="img/icon.ico"/>
 		<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
 		<link rel="stylesheet" type="text/css" href="css/navi.css" media="screen" />
@@ -51,7 +52,7 @@
 					<li class="b2"><a class="icon report" href="?gc=account_info">Dados Cadastrados</a></li>
 					<li class="b1"><a class="icon users" href="?gc=player_info">Informações</a></li>
 					<?php if($user->getAuthLevel()== 1 ){ ?>
-					<li class="b1"><a class="icon category" href="administracao_pbo/">Painel Admin</a></li>
+					<li class="b1"><a class="icon category" href="#">Painel Admin</a></li>
 					<?php }else{ 
 					}?>
 					
@@ -65,7 +66,7 @@
 					<li class="b1"><a class="icon report" href="?gc=download">Baixar Aqui</a></li>
 					<li class="b1"><a class="icon add_page" href="?gc=donate">Doação</a></li>
 					<li class="b1"><a class="icon page" href="?gc=regras">Regras</a></li>
-					<li class="b1"><a class="icon contact" href="suporte/">Suporte</a></li>
+					<li class="b1"><a class="icon contact" href="#">Suporte</a></li>
 				</ul>
 			</div>
 			<div class="box">
@@ -109,10 +110,10 @@
 
 	<div id="footer">
 		<div class="left">
-			<p>GCHero | Copyright 2017 |</p>
+			<p><?php echo $config->NameGC ?> | Copyright 2018 |</p>
 		</div>
 		<div class="right">
-			<p>&copy; 2017</p>
+			<p>&copy; 2018</p>
 		</div>
 	</div>
 </div>

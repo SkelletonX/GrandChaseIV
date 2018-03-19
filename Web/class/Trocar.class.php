@@ -5,7 +5,7 @@ Class Trocar{
 		$conexao = new Config;
 		try{
 			$conect = $conexao->getConn();
-			$prepare = $conect->prepare("SELECT * FROM account WHERE Login = ? AND Passwd = ?");
+			$prepare = $conect->prepare("SELECT * FROM ". $conexao->ContasTable ." WHERE ". $conexao->LoginsColumn ." = ? AND ". $conexao->PasswdColumn ." = ?");
 			$prepare->bindvalue(1, $_SESSION['username']);
 			$prepare->bindvalue(2, $pass);
 			$prepare->execute();
@@ -24,7 +24,7 @@ Class Trocar{
 		$conexao = new Config;
 		try{
 			$conect = $conexao->getConn();
-			$prepare = $conect->prepare("SELECT * FROM account WHERE Login = ? AND Email = ?");
+			$prepare = $conect->prepare("SELECT * FROM ". $conexao->ContasTable ." WHERE ". $conexao->LoginsColumn ." = ? AND ". $conexao->EmailColumn ." = ?");
 			$prepare->bindvalue(1, $_SESSION['username']);
 			$prepare->bindvalue(2, $mail);
 			$prepare->execute();
@@ -43,7 +43,7 @@ Class Trocar{
 		$conexao = new Config;
 		try{
 			$conect = $conexao->getConn();
-			$prepare = $conect->prepare("UPDATE account SET Passwd = ? WHERE Login = ?");
+			$prepare = $conect->prepare("UPDATE ". $conexao->ContasTable ." SET ". $conexao->PasswdColumn ." = ? WHERE ". $conexao->LoginsColumn ." = ?");
 			$prepare->bindvalue(1, $newpass);
 			$prepare->bindvalue(2, $_SESSION['username']);
 			$prepare->execute();
@@ -62,7 +62,7 @@ Class Trocar{
 		$conexao = new Config;
 		try{
 			$conect = $conexao->getConn();
-			$prepare = $conect->prepare("UPDATE account SET email = ? WHERE login = ?");
+			$prepare = $conect->prepare("UPDATE ". $conexao->ContasTable ." SET ". $conexao->EmailColumn ." = ? WHERE ". $conexao->LoginsColumn ." = ?");
 			$prepare->bindvalue(1, $newmail);
 			$prepare->bindvalue(2, $_SESSION['username']);
 			$prepare->execute();

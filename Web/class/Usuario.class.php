@@ -17,18 +17,18 @@ class Usuario{
         $conexao = new Config;
         try{
 			$conect = $conexao->getConn();
-			$sql = $conect->prepare("SELECT * FROM account WHERE Login = ?");
+			$sql = $conect->prepare("SELECT * FROM ". $conexao->ContasTable ." WHERE ". $conexao->LoginsColumn ." = ?");
 			$sql->bindParam(1, $usuario);
 			$sql->execute();
 			$dados = $sql->fetch(PDO::FETCH_ASSOC);
-			$this->email = $dados['Email'];
-			$this->nick = $dados['Nick'];
-			$this->isBan = $dados['isBan'];
-			$this->Online = $dados['Online'];
-			$this->ip = $dados['Ip'];
-			$this->gold = $dados['Gamepoint'];
-			$this->AuthLevel = $dados['AuthLevel'];
-			$this->IfEmail = $dados['IfEmail'];
+			$this->email = $dados[$conexao->EmailColumn];
+			$this->nick = $dados[$conexao->NickColumn];
+			$this->isBan = $dados[$conexao->isBanColumn];
+			$this->Online = $dados[$conexao->PlayerOnlineColumn];
+			$this->ip = $dados[$conexao->IPColumn];
+			$this->gold = $dados[$conexao->GamePointColumn];
+			$this->AuthLevel = $dados[$conexao->AuthLevelColumn];
+			$this->IfEmail = $dados[$conexao->CheckemailColumn];
 			
         }catch(PDOException $e){
             echo "Erro: ".$e->getMessage();

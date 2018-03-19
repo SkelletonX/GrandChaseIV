@@ -28,7 +28,7 @@
 					<td>Senha</td>
 					<td>************</td>
 					<td>
-						<a href="?pg=change_pass" class="table-icon edit" title="Change"></a>
+						<a href="?gc=change_pass" class="table-icon edit" title="Change"></a>
 					</td>
 					<td>								
 					</td>
@@ -37,7 +37,7 @@
 					<td>E-mail</td>
 					<td><?=$user->getEmail();?></td>
 					<td>
-						<a href="?pg=change_email" class="table-icon edit" title="Change"></a>
+						<a href="?gc=change_email" class="table-icon edit" title="Change"></a>
 					</td>
 					<td>								
 					</td>

@@ -1,8 +1,8 @@
 <?php
 session_start();
-//error_reporting(0);
 require("../class/Config.inc.php");
 $register = new Cadastro;
+$config = new Config;
 
 if(isset($_POST['submit'])){
 	if (trim($_POST['captcha']) != $_SESSION['cap_code']){
@@ -69,7 +69,7 @@ function check_email(elm){
 				   <?php if (isset($msg)){echo $msg;}?>
 				</form>
 		  </div>
-			<div style="color:#000;" class="footer">GrandChase Hero | Copyright 2017</div>
+			<div style="color:#000;" class="footer"><?php echo $config->NameGC ?> | Copyright 2018</div>
 	  </div>
   </div>
 </div>

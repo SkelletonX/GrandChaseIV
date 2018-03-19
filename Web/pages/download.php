@@ -1,3 +1,4 @@
+<?php $config = new Config; ?>
 <div id="main">
 	<div class="full_w">
 		<div class="h_title">Baixar</div>
@@ -9,14 +10,14 @@
 			<table style="margin-left:15px;margin-bottom: 15px;">
 				<thead>
 					<tr>
-						<th scope="col">GrandChase Hero Client Full</th>
+						<th scope="col"><?php echo $config->NameGC ?> Client Full</th>
 						<th scope="col">Baixe aqui o Jogo Completo em RAR</th>
 						<th scope="col"><a href="#"><img src='img/user3.png'></a></th>						
 					</tr>
 				</thead>
 				<thead>
 					<tr>
-						<th scope="col">GrandChase Hero Client Full</th>
+						<th scope="col"><?php echo $config->NameGC ?> Client Full</th>
 						<th scope="col">Baixe aqui o Jogo Completo em RAR</th>
 						<th scope="col"><a href="#"><img src='img/user3.png'></a></th>  						
 					</tr>

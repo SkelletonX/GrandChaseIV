@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+//error_reporting(0);
 echo !extension_loaded('openssl')?"Not Available":"";
 require 'PHPMailerAutoload.php';
 require 'phpmailer.class.php';
@@ -40,8 +40,9 @@ Class Cadastro{
     private function check_login($login){
         $conexao = new Config;
 	try{
+			$strquery = "SELECT * FROM ". $conexao->ContasTable ." WHERE ". $conexao->LoginsColumn ." = ?";
             $conect = $conexao->getConn();
-            $rank = $conect->prepare("SELECT * FROM account WHERE Login = ?");
+            $rank = $conect->prepare($strquery);
             $rank->bindValue(1, $login);
             $rank->execute();
             $ranking = $rank->rowCount();
@@ -58,8 +59,9 @@ Class Cadastro{
     private function check_email($email){
         $conexao = new Config;
 	try{
+			$strquery2 = "SELECT * FROM ". $conexao->ContasTable ." WHERE ". $conexao->EmailColumn ." = ?";		
             $conect = $conexao->getConn();
-            $rank = $conect->prepare("SELECT * FROM account WHERE Email = ?");
+            $rank = $conect->prepare($strquery2);
             $rank->bindValue(1, $email);
             $rank->execute();
             $ranking = $rank->rowCount();
@@ -76,7 +78,8 @@ Class Cadastro{
         $conexao = new Config;
 	try{
             $conect = $conexao->getConn();
-            $rank = $conect->prepare("SELECT * FROM account WHERE Nick = ?");
+			$strquery3 = "SELECT * FROM ". $conexao->ContasTable ." WHERE ". $conexao->NickColumn ." = ?";
+            $rank = $conect->prepare($strquery3);
             $rank->bindValue(1, $nick);
             $rank->execute();
             $ranking = $rank->rowCount();
@@ -94,7 +97,8 @@ Class Cadastro{
 		$conexao = new Config;
 	try{
             $conect = $conexao->getConn();
-            $rank = $conect->prepare("UPDATE account SET IfEmail = ? WHERE KeyEmail = ?");
+			$strquery4 = "UPDATE ". $conexao->ContasTable ." SET ". $conexao->CheckemailColumn ." = ? WHERE ". $conexao->KeyEmailColumn ." = ?";
+            $rank = $conect->prepare($strquery4);
             $rank->bindValue(1, 1);
 			$rank->bindValue(2, $key);
             $rank->execute();
@@ -119,11 +123,12 @@ Class Cadastro{
 				
 				if($pw == $pw2){
 					
-					$Rstring = sha1('Key_GCHero'. $email);
+					$Rstring = sha1('Key_SkelletonX'. $email);
 					
 					$conexao = new Config;
 					$conect = $conexao->getConn();
-					$rg = $conect->prepare("INSERT INTO account (login, Passwd, Email, Nick, Gamepoint, KeyEmail)VALUES (?, ?, ?, ?, ?, ?);");
+					$rgquery1 = "INSERT INTO ". $conexao->ContasTable ." (". $conexao->LoginsColumn .", ". $conexao->PasswdColumn .", ". $conexao->EmailColumn .", ". $conexao->NickColumn .", ". $conexao->GamePointColumn .", ". $conexao->KeyEmailColumn .")VALUES (?, ?, ?, ?, ?, ?);";
+					$rg = $conect->prepare($rgquery1);
 					$rg->bindValue(1, $login);
 					$rg->bindValue(2, $pw);
 					$rg->bindValue(3, $email);
@@ -132,16 +137,11 @@ Class Cadastro{
 					$rg->bindValue(6, $Rstring);
 					$rg->execute();
 					//2
-					$sql = $conect->prepare("SELECT * FROM account WHERE Login = ?");
+					$sqlquery2 = "SELECT * FROM ". $conexao->ContasTable ." WHERE ". $conexao->LoginsColumn ." = ?"; 
+					$sql = $conect->prepare($sqlquery2);
 					$sql->bindParam(1, $login);
 					$sql->execute();
 					$dados = $sql->fetch(PDO::FETCH_ASSOC);
-					//3
-					$rg3 = $conect->prepare("INSERT INTO `character` (LoginUID, CharType, Promotion)VALUES (?, ?, ?);");
-					$rg3->bindValue(1, $dados['LoginUID']);
-					$rg3->bindValue(2, 1);
-					$rg3->bindValue(3, 1);
-					$rg3->execute();
 
 					$sts = $rg->rowCount();
 					if ($sts >= 1){
@@ -151,13 +151,14 @@ Class Cadastro{
 						$Mailer->Charset = 'UTF-8';
 						$Mailer->SMTPAuth = true;
 						$Mailer->SMTPSecure = 'ssl';			
-						$Mailer->Host = "mail.grandchasehero.com"; 
+						$Mailer->Host = "smtp.gmail.com"; 
 						$Mailer->Port = 465;					
-						$Mailer->Username = 'confirm@grandchasehero.com';
-						$Mailer->Password = '@@@@@@@@@@@@@@@@@@@@@';			
-						$Mailer->From = 'confirm@grandchasehero.com';	
-						$Mailer->FromName = "GCH";		
-						$Mailer->Subject = 'GCHero - Confirme a sua conta.';
+						$Mailer->Username = 'kingofmustache@gmail.com';
+						$Mailer->Password = '#';			
+						$Mailer->From = 'kingofmustache@gmail.com';	
+						$Mailer->FromName = "GCSkelletonX";		
+						$Mailer->Subject = 'GCS - Confirme a sua conta.';
+						
 						$Body = ('<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 						<head>
 							<meta charset="UTF-8">
@@ -184,7 +185,7 @@ Class Cadastro{
 												<td class="mcnImageContent" valign="top" style="padding-right: 0px; padding-left: 0px; padding-top: 0; padding-bottom: 0; text-align:center;">
 													
 														
-															<img align="center" alt="" src="https://gallery.mailchimp.com/0679a0c4b834ffea2bffb2fcf/images/d6e08caa-a896-4550-aef0-c84205dc177c.png" width="315" style="max-width:315px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
+															<img align="center" alt="" src="https://vignette.wikia.nocookie.net/grandchase/images/5/51/English_gcelogo-copy-1.gif" width="315" style="max-width:315px; padding-bottom: 0; display: inline !important; vertical-align: bottom;" class="mcnImage">
 														
 													
 												</td>
@@ -290,7 +291,7 @@ Class Cadastro{
 										<tbody>
 											<tr>
 												<td align="center" valign="middle" class="mcnButtonContent" style="font-family: Helvetica; font-size: 18px; padding: 18px;">
-													<a class="mcnButton " title="Ativar Conta" href="http://site.grandchasehero.com/cadastrar/key.php?key='.$Rstring.' " target="_self" style="font-weight: bold;letter-spacing: -0.5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Ativar Conta</a>
+													<a class="mcnButton " title="Ativar Conta" href="http://127.0.0.1/cadastrar/key.php?key='.$Rstring.' " target="_self" style="font-weight: bold;letter-spacing: -0.5px;line-height: 100%;text-align: center;text-decoration: none;color: #FFFFFF;">Ativar Conta</a>
 												</td>
 											</tr>
 										</tbody>

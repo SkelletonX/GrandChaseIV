@@ -7,7 +7,8 @@ class Login {
 		 $id = 1;
 		try{
 			$conect = $conexao->getConn();
-			$prepare = $conect->prepare("SELECT * FROM account WHERE Login = ? AND Passwd = ? AND IfEmail = ?");
+			$strqury = "SELECT * FROM ". $conexao->ContasTable ." WHERE ". $conexao->LoginsColumn ." = ? AND ". $conexao->PasswdColumn ." = ? AND ". $conexao->CheckemailColumn ." = ?";
+			$prepare = $conect->prepare($strqury);
             $prepare->bindvalue(1, $login);
 			$prepare->bindvalue(2, $pw);
 			$prepare->bindvalue(3, $id);

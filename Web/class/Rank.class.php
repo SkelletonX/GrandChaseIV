@@ -7,7 +7,7 @@ class Rank {
 		$conexao = new Config;
 		try{
 			$conect = $conexao->getConn();
-			$prepare = $conect->prepare("SELECT * FROM account");
+			$prepare = $conect->prepare("SELECT * FROM ". $conexao->ContasTable ."");
             $prepare->execute();
 			$ranking = $prepare->rowCount();
 			return $ranking;

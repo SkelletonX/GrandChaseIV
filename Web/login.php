@@ -2,6 +2,7 @@
 	session_start();
     require("class/Config.inc.php");
 	$login = new Login;
+	$config = new Config;
 	
 	if(isset($_SESSION["username"])):
         echo "<script>window.location.href= 'index.php';</script>";
@@ -28,7 +29,7 @@
 	<body>
 		<div class="wrap">
 			<div id="content">
-				<p><img src="http://site.grandchasehero.com/img/GrandChase.png" width="400" height="200" /></p>	
+				<p><img src="img/GrandChase.png" width="400" height="200" /></p>	
 				<div id="main">
 					<div class="full_w">
 						<form action="" method="post">
@@ -45,7 +46,7 @@
 						</form>
 					</div>
 					
-					<div class="footer"><li><font color="#000000">GrandChase Hero | Copyright 2017</font></div>
+					<div class="footer"><li><font color="#000000"><?php echo $config->NameGC ?> | Copyright 2018 | Author SkelletonX </font></div>
 				</div>
 			</div>
 		</div>
