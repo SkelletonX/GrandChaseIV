@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010 FIXED
+# Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CenterServer", "GCCenterServer\GrandChase\CenterServer\CenterServer.csproj", "{56223238-7174-4478-83D0-FB66310D3C0B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameServer", "GCGameServer\GrandChase\GameServer\GameServer.csproj", "{62122130-EFA3-4305-B624-75A2BAF00F6A}"
