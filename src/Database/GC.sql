@@ -1,6 +1,6 @@
 /*
 SQLyog Ultimate v12.09 (32 bit)
-MySQL - 5.0.51b-community-nt-log : Database - GC
+MySQL - 5.0.51b-community-nt-log : Database - GC SkelletonX - PC
 *********************************************************************
 */
 
@@ -117,7 +117,7 @@ DROP TABLE IF EXISTS `servidores`;
 CREATE TABLE `servidores` (
   `id` int(4) NOT NULL auto_increment,
   `name` varchar(255) default NULL,
-  `descricao` varbinary(255) default NULL,
+  `descricao` varchar(255) default NULL, /* Fixed by SkelletonX*/
   `IP` varchar(255) default NULL,
   `PORTA` int(4) default NULL,
   `UsuariosOnline` int(4) default NULL,
