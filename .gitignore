@@ -23,6 +23,8 @@ bld/
 [Ll]og/
 .vs
 src/Release
+m.lnk
+*.lnk
 
 # Visual Studio 2015 cache/options directory
 .vs/
