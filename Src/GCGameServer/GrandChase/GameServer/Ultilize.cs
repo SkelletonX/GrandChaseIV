@@ -15,6 +15,7 @@ namespace GameServer
 
         public static byte[] StringFromHex(string hex)
         {
+            //hex 0
             hex = hex.Replace(" ", "");
             byte[] raw = new byte[hex.Length / 2];
             for (int i = 0; i < raw.Length; i++)
